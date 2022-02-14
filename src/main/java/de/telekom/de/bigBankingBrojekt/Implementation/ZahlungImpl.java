@@ -1,17 +1,22 @@
 package de.telekom.de.bigBankingBrojekt.Implementation;
 
+import de.telekom.de.bigBankingBrojekt.Interfaces.BIC;
+import de.telekom.de.bigBankingBrojekt.Interfaces.Empfaenger;
+import de.telekom.de.bigBankingBrojekt.Interfaces.IBAN;
+import de.telekom.de.bigBankingBrojekt.Interfaces.Waehrung;
 import de.telekom.de.bigBankingBrojekt.Interfaces.Zahlung;
+
 
 /**
  * Beschreibung einer einzelnen Zahlung
  */
 public class ZahlungImpl implements Zahlung {
 
-	private String empfaenger;
-	private String empfaengerIBAN;
-	private String empfaengerBIC;
+	private Empfaenger empfaenger;
+	private IBAN empfaengerIBAN;
+	private BIC empfaengerBIC;
 	private double betrag;
-	private String waehrung;
+	private Waehrung waehrung;
 	private String verwendungszweck;
 	private int counter;   /** dieser Counter erhält den Wert bei jeder Initialisierung
 	 					       von der ZahlungenImpl (aktuelle ArrayPosition)*/
@@ -21,7 +26,7 @@ public class ZahlungImpl implements Zahlung {
 	 * Eigener Constructor, der direkt bereits Werte beim erstellen der Instanz in
 	 * den Variablen speichert
 	 */
-	public ZahlungImpl(String empfaenger, String empfaengerIBAN, String empfaengerBIC, double betrag, String waehrung,
+	public ZahlungImpl(Empfaenger empfaenger, IBAN empfaengerIBAN, BIC empfaengerBIC, double betrag, Waehrung waehrung,
 			String verwendungszweck, int counter) {
 
 		this.empfaenger = empfaenger;
@@ -38,7 +43,7 @@ public class ZahlungImpl implements Zahlung {
 		if (empfaenger == null) {
 			throw new Exception("Der Empfänger darf nicht leer sein.");
 		} else {
-			return empfaenger;
+			return empfaenger.getEmpfaenger();
 		}
 	}
 
@@ -46,7 +51,7 @@ public class ZahlungImpl implements Zahlung {
 		if (empfaengerIBAN == null) {
 			throw new Exception("Die IBAN des Empfängers darf nicht leer sein.");
 		} else {
-			return empfaengerIBAN;
+			return empfaengerIBAN.getEmpfaengerIBAN();
 		}
 	}
 
@@ -54,7 +59,7 @@ public class ZahlungImpl implements Zahlung {
 		if (empfaengerBIC == null) {
 			throw new Exception("Die BIC des Empfängers darf nicht leer sein.");
 		} else {
-			return empfaengerBIC;
+			return empfaengerBIC.getBic();
 		}
 	}
 
@@ -71,7 +76,7 @@ public class ZahlungImpl implements Zahlung {
 		if (waehrung == null) {
 			throw new Exception("Die Währung einer Transaktion darf nicht leer sein.");
 		} else {
-			return waehrung;
+			return waehrung.getWaehrung();
 		}
 	}
 

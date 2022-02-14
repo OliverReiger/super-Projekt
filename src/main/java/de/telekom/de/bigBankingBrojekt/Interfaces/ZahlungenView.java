@@ -9,5 +9,5 @@ public interface ZahlungenView {
 	 */
 	void multiOutput(Zahlungen zahlungen) throws Exception;
 
-	//Zahlungen testZahlungen();
+	// Zahlungen testZahlungen();
 }

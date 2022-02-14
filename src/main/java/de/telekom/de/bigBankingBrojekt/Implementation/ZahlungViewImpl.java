@@ -15,11 +15,14 @@ public class ZahlungViewImpl implements ZahlungView {
 
 	}
 
+
 	/**
 	 * abmanagen und austauschen gegen eine Erfassung einer Einzelüberweisung
-	 *
-	 */
+	 
+	
 	public Zahlung testZahlung() {
-		return new ZahlungImpl("Testkunde", "TestIBAN", "TestBIC", 222.22, "Eruo", "Test Verwendung", 0);
+		// return new ZahlungImpl("Testkunde", "TestIBAN", "TestBIC", 222.22, "Eruo", "Test Verwendung", 0);
+		
 	}
+	**/
 }

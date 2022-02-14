@@ -7,6 +7,6 @@ public interface ZahlungView {
 	String detailOutput(Zahlungen zahlungen, int position) throws Exception;
 	
 	
-	Zahlung testZahlung();
+	// Zahlung testZahlung();
 
 }

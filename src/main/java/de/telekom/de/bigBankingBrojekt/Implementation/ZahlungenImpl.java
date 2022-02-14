@@ -41,9 +41,9 @@ public class ZahlungenImpl extends GenericListImpl<Zahlung> implements Zahlungen
 			BufferedReader reader = new BufferedReader(fileReader);
 			while ((line = reader.readLine()) != null) {
 				String[] ausgeleseneWert = line.split(trenner);
-				Zahlung temp = new ZahlungImpl(ausgeleseneWert[0], " ", " ", Double.parseDouble(ausgeleseneWert[1]),
-						ausgeleseneWert[2], " ", this.counter);
-				this.add(temp);
+				// Zahlung temp = new ZahlungImpl(ausgeleseneWert[0], " ", " ", Double.parseDouble(ausgeleseneWert[1]),
+					//	ausgeleseneWert[2], " ", this.counter);
+				// this.add(temp);
 				counter++;
 								
 			}
